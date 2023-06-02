@@ -1,0 +1,55 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Oswald&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+/* Colors */
+
+:root{
+    --bs-btn-hover-color:white;
+}
+
+
+
+
+body{
+    background-color: rgb(24, 25, 46);
+    width: 763px;
+    height: 100px;
+}
+.home{
+    position: relative;
+    top: 190px;
+left: 250px;
+}
+.name{
+color: rgb(230, 93, 116);
+font-style: italic;
+}
+
+.homeBrief{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.button{
+    text-align: center;
+    position: relative;
+    left: 25%;
+    bottom: 45px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.codingGiphy{
+    position: relative;
+    left: 400px;
+    bottom: 160px;
+    width: 250px;
+    height: 200px;
+}
+.btn:hover {
+    color: white ;
+    background-color: rgb(25,25,47);
+    border-color: #fff;
+}

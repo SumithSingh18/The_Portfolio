@@ -1,0 +1,681 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+/* Colors */
+:root {
+  --bs-btn-hover-color: white;
+}
+
+.navCall {
+  padding-left: 75%;
+  letter-spacing: 1.5px;
+}
+
+.navLink {
+  text-transform: uppercase;
+  text-shadow: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.indexName {
+  text-transform: uppercase;
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+body {
+  background-color: rgb(24, 25, 46);
+}
+
+.home {
+  position: relative;
+  top: 190px;
+  left: 250px;
+}
+
+.name {
+  color: rgb(230, 93, 116);
+  font-style: italic;
+}
+
+.homeBrief {
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.aboutMe {
+  margin-top: 20px;
+  margin-right: 82%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.card-img-top {
+  width: 100px;
+  margin-left: 130px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-group {
+  padding-left: 250px;
+}
+
+.cardBox {
+  background-color: darkgrey;
+}
+
+.bioDesc {
+  color: rgb(82, 78, 78);
+  font-size: 0.9rem;
+}
+
+/* About me */
+
+.aboutMe2 {
+  margin-top: 20px;
+  margin-left: 250px;
+  background-color: rgb(24, 25, 46);
+  color: aliceblue;
+  font-family: "DM Sans", sans-serif;
+  box-shadow: 2px 2px 55px #333;
+}
+
+.card-boy {
+  margin-top: 20px;
+  margin-left: 34px;
+}
+
+.profilePic {
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 150px;
+  height: 190px;
+  margin-top: 20px;
+  margin-left: 65px;
+}
+
+#myChart {
+  margin-left: 650px;
+  display: flex;
+  margin-bottom: 500px;
+  margin-top: -400px;
+}
+
+.mySkills {
+  color: white;
+  margin-left: 900px;
+  position: relative;
+  bottom: 430px;
+  font-family: "Abril Fatface";
+  text-decoration: underline;
+}
+
+/* Get in touch */
+
+.haveAnyQ {
+  font-family: "DM Sans", "sans-serif";
+  color: rgb(68, 222, 94);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contactBox {
+  text-align: center;
+}
+
+/* Get in Touch */
+
+.getInTouch {}
+
+/* Footer */
+
+.foot {
+  background-color: rgb(6, 6, 44);
+  width: 1550px;
+  height: 150px;
+  text-align: center;
+  padding-right: 90px;
+  padding-top: 50px;
+  letter-spacing: 20px;
+}
+  /* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+/* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 10px;
+  }}
+
+  /* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 10px;
+  }
+}
+/* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 1200px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 10px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 5px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 20px;
+    left: 5px;
+  }
+
+  .homeBrief {
+    font-size: 1rem;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 40px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 5px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 60px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+}

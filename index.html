@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+/* Colors */
+:root {
+  --bs-btn-hover-color: white;
+}
+
+.navCall {
+  padding-left: 75%;
+  letter-spacing: 1.5px;
+}
+
+.navLink {
+  text-transform: uppercase;
+  text-shadow: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.indexName {
+  text-transform: uppercase;
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+body {
+  background-color: rgb(24, 25, 46);
+}
+
+.home {
+  position: relative;
+  top: 190px;
+  left: 250px;
+}
+
+.name {
+  color: rgb(230, 93, 116);
+  font-style: italic;
+}
+
+.homeBrief {
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.aboutMe {
+  margin-top: 20px;
+  margin-right: 82%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.card-img-top {
+  width: 100px;
+  margin-left: 130px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-group {
+  padding-left: 250px;
+}
+
+.cardBox {
+  background-color: darkgrey;
+}
+
+.bioDesc {
+  color: rgb(82, 78, 78);
+  font-size: 0.9rem;
+}
+
+/* About me */
+
+.aboutMe2 {
+  margin-top: 20px;
+  margin-left: 250px;
+  background-color: rgb(24, 25, 46);
+  color: aliceblue;
+  font-family: "DM Sans", sans-serif;
+  box-shadow: 2px 2px 55px #333;
+}
+
+.card-boy {
+  margin-top: 20px;
+  margin-left: 34px;
+}
+
+.profilePic {
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 150px;
+  height: 190px;
+  margin-top: 20px;
+  margin-left: 65px;
+}
+
+#myChart {
+  margin-left: 650px;
+  display: flex;
+  margin-bottom: 500px;
+  margin-top: -400px;
+}
+
+.mySkills {
+  color: white;
+  margin-left: 900px;
+  position: relative;
+  bottom: 430px;
+  font-family: "Abril Fatface";
+  text-decoration: underline;
+}
+
+/* Get in touch */
+
+.haveAnyQ {
+  font-family: "DM Sans", "sans-serif";
+  color: rgb(68, 222, 94);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contactBox {
+  text-align: center;
+}
+
+/* Get in Touch */
+
+.getInTouch {}
+
+/* Footer */
+
+.foot {
+  background-color: rgb(6, 6, 44);
+  width: 1550px;
+  height: 150px;
+  text-align: center;
+  padding-right: 90px;
+  padding-top: 50px;
+  letter-spacing: 20px;
+}
+  /* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+/* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 10px;
+  }}
+
+  /* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  #myChart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+
+  .foot {
+    width: auto;
+    padding: 10px;
+  }
+}
+/* ...existing code... */
+
+/* Responsive code */
+@media only screen and (max-width: 1200px) {
+  .home {
+    top: 100px;
+    left: 50px;
+  }
+
+  .card-group {
+    padding-left: 0;
+  }
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home {
+    top: 50px;
+    left: 20px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 15px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    top: 30px;
+    left: 10px;
+  }
+
+  .homeBrief {
+    font-size: 1.2rem;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 10px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  #myChart {
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .mySkills {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: initial;
+    top: 5px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home {
+    top: 20px;
+    left: 5px;
+  }
+
+  .homeBrief {
+    font-size: 1rem;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 40px;
+    margin: 0 auto;
+  }
+
+  .cardBox {
+    margin-bottom: 5px;
+  }
+
+  .aboutMe {
+    margin-right: 0;
+  }
+
+  .profilePic {
+    width: 60px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+<!-- Nav Bar -->
+  <nav class="navbar visible navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navCall col-sm-12" id="navbarNav">
+      <ul class="navbar-nav navLink">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Me</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  
+  <!-- About -->
+
+  <h1 class="indexName" href="#" style="text-decoration: underline 2px; text-align: center; padding-top: 40px;
+      ">About </h1>
+
+  <div class="aboutMe container mt-5">
+    <div class="card-group row">
+      <div class="card col-sm-4 level">
+        <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/1584/1584942.png" alt="Card image cap"
+          style="margin-right: 100px;">
+        <div class="card-body col">
+          <h5 class="card-title">Fast</h5>
+          <p class="card-text">Fast load times and lag free interaction, my highest priority.</p>
+
+        </div>
+      </div>
+      <div class="card col-sm-4">
+        <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" alt="Card image cap">
+        <div class="card-body col">
+          <h5 class="card-title">Responsive</h5>
+          <p class="card-text">My aim is too make my every project Responsive. The layouts i build will work on any
+            device, big or small.</p>
+
+        </div>
+      </div>
+      <div class="card col-sm-4">
+        <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/128/1042/1042008.png" alt="Card image cap">
+        <div class="card-body col">
+          <h5 class="card-title">Intuitive</h5>
+          <p class="card-text">I have a Strong preference for easy to use, intuitive UX/UI and very accessible layout
+            building.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- My Details -->
+  <!-- #374259; -->
+  <br><br>
+  <div class="card aboutMe2" style="width: 18rem;">
+    <img class="profilePic" src="images/new-profile.png" alt="Card image cap" style="background-color: #474E68;">
+    <div class="card-boy">
+      <h5 class="card-title" style="margin-right:30px;">Who am i?</h5>
+      <p class="card-text" style="font-size: medium;">I'm an Entry level Front-End Developer in Bangalore, India.
+        <hr style="margin-right: 25px;"> I Love to code, Passion for UI/UX, Creating Intuitive and Dynamic User
+        experiences.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div>
+    <h3 class="mySkills">My Skills</h3>
+    <canvas id="myChart" width="200" height="100" style="width:50%;max-width:600px"></canvas>
+  </div>
+  <!-- Contact me -->
+<div class="getInTouch">
+  <div>
+    <hr style="color: white;">
+    <h1 class="indexName" href="#" id="contact" style="text-decoration: underline 2px; text-align: center;
+">Get in touch </h1>
+  </div>
+
+  <h4 class="haveAnyQ">Have a question or want to work together?
+  </h4>
+  <div class="row contactBox">
+
+    <!-- Form -->
+    <form action="acceptTheInfo.php" method="post">
+      <input type="text" placeholder="Name" name="name"
+        style="width: 645px; font-family: 'Courier New', Courier, monospace; font-weight: bolder;">
+      <br>
+      <input type="email" placeholder="Email" name="email"
+        style="width: 645px; font-family: 'Courier New', Courier, monospace; font-weight: bolder;">
+        
+      <br>
+      <textarea placeholder="Your Message" name="message" spellcheck="false"
+        style="width: 645px; height: 179px; font-family: 'Courier New', Courier, monospace; font-weight: bolder;"></textarea>
+      <br>
+      <!-- <input type="submit" class="button" id="submit" value="SUBMIT" style="text-align: left;"> -->
+      <button type="submit" onclick="alert('Your Response has been recorded')" class="button" id="submit" style="text-align:left">SUBMIT</button>
+
+    </form>
+  </div>
+</div> 
+  <!-- Footer -->
+  <br>
+  <footer>
+    <div style="font-size: 2.6rem; padding-left: 120px;" class="foot">
+      <a class="fa-brands fa-linkedin" style="color: white;text-decoration: none;"
+        href="https://www.linkedin.com/in/sumith-singh-6ba03b190/"></a>
+
+      <a class="fa-brands fa-github" style="color: white; text-decoration: none;"
+        href="https://github.com/SumithSingh18/"></a>
+
+      <a class="fa-brands fa-codepen" style="color: aliceblue; text-decoration: none;"
+        href="https://codepen.io/sumithsingh18"></a>
+
+    </div>
+    <div class="footNote">
+      <h6>SUMITH SINGH <span style="color: rgb(201, 29, 58);">©2022</span> </h6>
+    </div>
+
+
+  </footer>
+
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</body>
+
+</html>
